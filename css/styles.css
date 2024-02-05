@@ -1,0 +1,73 @@
+/**********html**********/
+:root{
+    --blue: #a4dde7;
+}
+html{
+    margin: 0;
+    padding: 0%;
+    scroll-behavior: smooth;
+}
+/**********nav**********/
+#menu{
+    list-style-type: none;
+    display: flex;
+    gap: 1.25rem;
+    justify-content: end;
+}
+#menu a{
+    text-decoration: none;
+    color: black;
+    font-family: "main";
+    gap: 1.25rem;
+    justify-content: end;
+    align-items: center;
+}
+#menu-toggle{
+    display: none;
+    background-color: var(--blue);
+    color: var(--light-beige);
+    border: none;
+    
+}
+#menu.active{
+    display: flex;
+    }
+
+nav{
+    display: flex;
+  padding: .3125rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--blue);
+  border-radius: .625rem;
+ padding-left: .625rem;
+  
+}
+/**********hero**********/
+
+
+
+
+
+
+
+
+
+
+
+/**********mobile**********/
+@media  screen and (max-width: 43.75rem) {
+#menu-toggle{
+    display: block;
+    position: fixed;
+    z-index: 100000;
+}
+#menu{
+    display: none; 
+    position: fixed;
+    z-index: 100000;
+    flex-direction: column;
+    background-color: var(--light);
+    border-radius: .625rem;
+    justify-content: start;
+}}
