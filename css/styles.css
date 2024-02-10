@@ -51,7 +51,7 @@ nav a{
 
 /**********header**********/
 .hero{
-    background-image: url(/img/hero.png);
+    background-image: url(../img/hero.png);
     height: 30rem;
     background-position: center;
     background-repeat: none;
