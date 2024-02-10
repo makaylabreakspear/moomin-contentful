@@ -6,46 +6,51 @@ document.getElementById("menu-toggle").addEventListener("click", function (){
 
 
 
-// console.log('hello world!');
+console.log('hello world!');
 
-// var client = contentful.createClient({
-//     space: 'fdt9412ua609',
-//     accessToken: 'AOznWQA6p9nTvEus8d_87okFOAfNuTUzj31CTf3jAtM',
-//   });
+var client = contentful.createClient({
+    space: 'fdt9412ua609',
+    accessToken: 'AOznWQA6p9nTvEus8d_87okFOAfNuTUzj31CTf3jAtM',
+  });
   
-//    var placeForContent = document.getElementById('place-for-content');
+   var placeForContent = document.getElementById('place-for-content');
 
 
 
 
 
 
-//   //   client is helper to connect to contentful
-// //   getEntries is a method to get all entries from contentful
-// //   entries is an object that contains all the entries
-// client.getEntries().then(function (entries) {
-//     console.log(entries);
-//     // for each entry run the function
-//     entries.items.forEach(function (entry) {
-//         //  fields are the fields we named in contentful
-//         var entryDiv = document.createElement('div');
-//       entryDiv.classList.add('entry-div');
+  //   client is helper to connect to contentful
+//   getEntries is a method to get all entries from contentful
+//   entries is an object that contains all the entries
+client.getEntries().then(function (entries) {
+    console.log(entries);
+    // for each entry run the function
+    entries.items.forEach(function (entry) {
+        //  fields are the fields we named in contentful
+        var entryDiv = document.createElement('div');
+      entryDiv.classList.add('entry-div');
 
-//       if (entry.fields.name) {
-//         var name = document.createElement('h2');
-//         name.innerHTML = entry.fields.name;
-//         entryDiv.appendChild(name);
+      if (entry.fields.name) {
+        var name = document.createElement('h2');
+        name.innerHTML = entry.fields.name;
+        entryDiv.appendChild(name);
 
-//         var link = document.createElement('a');
-//         link.innerHTML = "link to " + entry.fields.name;
-//         link.href = entry.fields.link
-//         entryDiv.appendChild(link);
+        
+            var description = document.createElement('p');
+            description.innerHTML = entry.fields.description;
+            entryDiv.appendChild(description);
 
-//         placeForContent.appendChild(entryDiv);
-//       }
+        var link = document.createElement('a');
+        link.innerHTML = "link to " + entry.fields.name;
+        link.href = entry.fields.link
+        entryDiv.appendChild(link);
+
+        placeForContent.appendChild(entryDiv);
+      }
       
-//     });
-//   });
+    });
+  });
   
 
 

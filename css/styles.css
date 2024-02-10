@@ -1,31 +1,32 @@
 /**********html**********/
 :root{
     --blue: #a4dde7;
+    --dark-blue:#0b60b0;
 }
 html{
     margin: 0;
     padding: 0%;
     scroll-behavior: smooth;
+    width: 100%;
 }
 /**********nav**********/
 #menu{
     list-style-type: none;
     display: flex;
     gap: 1.25rem;
-    justify-content: end;
+    justify-content: start;
 }
 #menu a{
     text-decoration: none;
     color: black;
     font-family: "main";
     gap: 1.25rem;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
 }
 #menu-toggle{
     display: none;
     background-color: var(--blue);
-    color: var(--light-beige);
     border: none;
     
 }
@@ -35,17 +36,77 @@ html{
 
 nav{
     display: flex;
-  padding: .3125rem;
-  justify-content: space-between;
-  align-items: center;
+  align-items: end;
   background-color: var(--blue);
-  border-radius: .625rem;
- padding-left: .625rem;
-  
+ text-align: right;
+ width: 100%;
 }
-/**********hero**********/
+nav a{
+    margin: 20px;
+    font-size: larger;
+}
+
+/**********header**********/
+.hero{
+    background-image: url(/img/hero.png);
+    height: 30rem;
+    background-position: center;
+    background-repeat: none;
+}
 
 
+
+
+
+
+/**********about**********/
+.about-txt{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+   margin: 90px;
+   align-items: center;
+   justify-content: center;
+}
+.tove-img{
+    max-width: 100%;
+   height: auto;
+}
+.about{
+    display: flex;
+    flex-direction: row;
+    height: 40rem;
+    justify-content: start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    padding: 1.875rem;
+    margin: 1.875rem;
+}
+.about-txt h2{
+    font-size: xxx-large;
+    margin-top: 6.25rem;
+    margin-bottom: .625rem;
+    padding-right: 1.9375rem;
+    text-align: left;
+}
+.about-txt p{
+    margin-bottom: 3.875rem;
+    padding-right: 1.9375rem;
+    padding-left: 1.0625rem;
+    font-size: medium;
+}
+
+.moomin-books-head{
+    background-color: var(--blue);
+    color: var(--dark-blue);
+    padding: 1rem;
+    text-align: center;
+    font-size: x-large;
+}
+/**********books**********/
+.entry-div{
+    display: flex;
+    flex-direction: column;
+}
 
 
 
@@ -57,17 +118,73 @@ nav{
 
 /**********mobile**********/
 @media  screen and (max-width: 43.75rem) {
+    /**********nav**********/
 #menu-toggle{
     display: block;
     position: fixed;
     z-index: 100000;
+    padding: 0.60rem;
+    border-radius: .25rem;
 }
 #menu{
     display: none; 
     position: fixed;
     z-index: 100000;
     flex-direction: column;
-    background-color: var(--light);
+    background-color: var(--blue);
     border-radius: .625rem;
     justify-content: start;
-}}
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    background-color: transparent;
+    
+}
+nav a{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+/**********header**********/
+.hero{
+    display: none;
+}
+/**********about**********/
+.about{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+     height: fit-content;
+     margin-top: 1.0625rem;
+     padding: 0;
+     justify-content: center;
+     align-items: center;
+}
+.about-txt{
+   display: block;
+   margin: 0;
+   padding: 0;
+   justify-content: center;
+}
+.tove-img img{
+    max-width: 100%;
+}
+.about-txt h2{
+    font-size: larger;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+   
+}
+.about-txt p{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.moomin-books-head{
+    font-size: large;
+    border-radius: .625rem;
+}
+
+}
