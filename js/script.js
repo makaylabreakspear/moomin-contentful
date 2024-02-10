@@ -81,7 +81,7 @@ client.getEntries().then(function (entries) {
 // //                                   {name:"Biz"}, {name:"AI"}
 // //                               ]}
 // // ];
- console.log(students[0].name);
+//  console.log(students[0].name);
 
 // // students.forEach(function (student){
 // //   console.log ("student name is " + student.name);
