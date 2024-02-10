@@ -30,6 +30,9 @@ html{
     border: none;
     
 }
+
+
+
 #menu.active{
     display: flex;
     }
