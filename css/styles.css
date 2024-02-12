@@ -105,7 +105,7 @@ nav a:hover{
     font-size: x-large;
 }
 /**********books**********/
-.entry-div{
+/* .entry-div{
     display: flex;
     flex-direction: column;
     margin-top: 1.25rem;
@@ -151,7 +151,7 @@ nav a:hover{
 
 
 
-
+ */
 
 /**********mobile**********/
 @media  screen and (max-width: 43.75rem) {
@@ -224,7 +224,7 @@ nav a{
     border-radius: .625rem;
 }
 /********** book section**********/
-.place-for-content{
+/* .place-for-content{
     display: block;
 }
 .entry-div{
@@ -238,5 +238,5 @@ nav a{
 }
 .img-div img{
     width: 100%;
-}
+} */
 }
