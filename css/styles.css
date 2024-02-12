@@ -24,6 +24,10 @@ html{
     justify-content: center;
     align-items: center;
 }
+#menu a:hover{
+    transition: 0.5ms;
+    color: var(--dark-blue);
+}
 #menu-toggle{
     display: none;
     background-color: var(--blue);
@@ -48,7 +52,10 @@ nav a{
     margin: 20px;
     font-size: larger;
 }
-
+nav a:hover{
+    transition: 0.5ms;
+    color: var(--blue);
+}
 /**********header**********/
 .hero{
     background-image: url(../img/hero.png);
@@ -66,36 +73,28 @@ nav a{
 .about-txt{
     display: grid;
     grid-template-rows: 1fr 1fr;
-   margin: 90px;
+   margin-left: 25px;
    align-items: center;
-   justify-content: center;
+   padding-left: 20px;
+   padding-right: 20px;
 }
 .tove-img{
     max-width: 100%;
-   height: auto;
 }
 .about{
     display: flex;
     flex-direction: row;
-    height: 40rem;
-    justify-content: start;
-    align-items: stretch;
-    flex-wrap: nowrap;
     padding: 1.875rem;
-    margin: 1.875rem;
+    align-items: center;
 }
 .about-txt h2{
     font-size: xxx-large;
-    margin-top: 6.25rem;
-    margin-bottom: .625rem;
-    padding-right: 1.9375rem;
     text-align: left;
+    padding: 0;
 }
 .about-txt p{
-    margin-bottom: 3.875rem;
-    padding-right: 1.9375rem;
-    padding-left: 1.0625rem;
     font-size: medium;
+    padding: 0;
 }
 
 .moomin-books-head{
@@ -109,8 +108,43 @@ nav a{
 .entry-div{
     display: flex;
     flex-direction: column;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
+.img-div{
+    width: 100%;
+    justify-content: center;
+}
+.img-div img{
+    width: 60%;
+    justify-content: center;
+}
+
+.place-for-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1.25rem;
+    padding: .925rem;
+    
+}
+.entry-div{
+    height: 30rem;
+    justify-content: center;
+}
+.entry-div a{
+    text-decoration: none;
+    color: white;
+    background-color: var(--dark-blue);
+    padding: .625rem;
+    border-radius: .625rem;
+    text-align: center;
+}
+.entry-div a:hover{
+    background-color: var(--blue);
+    transition: 0.5ms;
+    color: black;
+}
 
 
 
@@ -189,5 +223,20 @@ nav a{
     font-size: large;
     border-radius: .625rem;
 }
-
+/********** book section**********/
+.place-for-content{
+    display: block;
+}
+.entry-div{
+    flex-direction: column;
+    height: 30rem;
+    align-items: start;
+}
+.img-div{
+    width: 100%;
+    align-items: center;
+}
+.img-div img{
+    width: 100%;
+}
 }
