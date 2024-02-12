@@ -63,6 +63,17 @@ client.getEntries({content_type: 'moominBooks',}).then(function (entries) {
 
 
       }
-      
+    });
+  });
+  client.getEntries().then(function (entries) {
+    console.log(entries);
+    // for each entry run the function
+    entries.items.forEach(function (entry) {
+        //  fields are the fields we named in contentful
+      if (entry.fields.name) {
+        console.log("entry name: " + entry.fields.name);
+        console.log("entry link: " + entry.fields.link);
+        console.log("entry image url: " + entry.fields.mainImage.fields.file.url);
+      }
     });
   });
