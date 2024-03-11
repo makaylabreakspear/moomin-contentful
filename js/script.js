@@ -61,9 +61,19 @@ client.getEntries({content_type: 'moominBooks',}).then(function (entries) {
                //  putting everything in the div in the html
         placeForContent.appendChild(entryDiv);
 
-
+        var linkToDetails = document.createElement('a');
+          linkToDetails.href = linkToDetails.href = 'details.html?id=' + entry.sys.id;
+          linkToDetails.appendChild(mainImage);
+          linkToDetails.appendChild(imgDiv);
+          
+          placeForContent.appendChild(imgDiv); 
+          placeForContent.appendChild(linkToDetails);
+          imgDiv.append(linkToDetails);
+          placeForContent.appendChild(entryDiv);
       }
+      
     });
+    
   });
   client.getEntries().then(function (entries) {
     console.log(entries);
@@ -75,5 +85,8 @@ client.getEntries({content_type: 'moominBooks',}).then(function (entries) {
         console.log("entry link: " + entry.fields.link);
         console.log("entry image url: " + entry.fields.mainImage.fields.file.url);
       }
+     
+      
     });
+    
   });
