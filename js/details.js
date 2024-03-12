@@ -15,11 +15,37 @@ var client = contentful.createClient({
   var product = document.getElementById('product');
   client.getEntry(id).then(function (entry) {
     console.log(entry);
-    var name = document.createElement('h3');
-    name.innerHTML = entry.fields.name;
-    product.appendChild(name);
 
-    var galleryDiv = document.createElement('div');
+    
+
+    var imgDiv = document.createElement('div');
+    imgDiv.classList.add('img-div2');
+    console.log(entry.fields.mainImage.fields.file.url);
+    var mainImage = document.createElement('img');
+    mainImage.src = entry.fields.mainImage.fields.file.url;
+    imgDiv.append(mainImage);
+    product.appendChild(imgDiv);
+
+    var entryDiv = document.createElement('div');
+    entryDiv.classList.add('entry-div2');
+    var name = document.createElement('h2');
+    name.innerHTML = entry.fields.name;
+    entryDiv.appendChild(name);
+       //  putting everything in the div in the html
+product.appendChild(entryDiv);
+    var description = document.createElement('p');
+    description.innerHTML = entry.fields.description;
+    entryDiv.appendChild(description);
+      //  creating the link
+var link = document.createElement('a');
+link.innerHTML = "link to " + entry.fields.name;
+link.href = entry.fields.link
+entryDiv.appendChild(link);
+
+
+       //  putting everything in the div in the html
+product.appendChild(entryDiv);
+var galleryDiv = document.createElement('div');
     galleryDiv.classList.add('gallery');
     entry.fields.gallery.forEach(function(image){
         var img = document.createElement('img');
@@ -27,5 +53,6 @@ var client = contentful.createClient({
         galleryDiv.appendChild(img);
     });
     product.appendChild(galleryDiv);
+
 
   });
