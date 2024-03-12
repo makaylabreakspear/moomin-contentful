@@ -1,7 +1,9 @@
 var textInURL = window.location.search;
 var parametersInURL = new URLSearchParams(textInURL);
 var id = parametersInURL.get('id');
-
+document.getElementById("menu-toggle").addEventListener("click", function (){
+  document.getElementById ("menu").classList.toggle("active");
+});
 console.log(id);
 
 var client = contentful.createClient({
